@@ -58,7 +58,7 @@ nav .nav-booking:hover { background: var(--sage); text-decoration: none; }
 .about-copy h2 { margin-bottom: 24px; }
 .about-copy .lead { font-size: 20px; line-height: 1.7; color: #3c4e42; }
 .section-heading > p { margin-top: 26px; max-width: 340px; }
-.topics-section { background: var(--sage); }
+.topics-section { padding-block: 16px 64px; }
 .section-intro { margin-bottom: 42px; }
 .topics-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 44px; }
 .topic { border-top: 1px solid #bac8b3; padding-top: 22px; }
