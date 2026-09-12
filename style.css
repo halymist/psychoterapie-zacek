@@ -140,7 +140,8 @@ nav .nav-booking:hover { background: var(--sage); text-decoration: none; }
 .booking-terms p { max-width: 90ch; }
 .booking-terms p + p { margin-top: 10px; }
 .contact-section { background: var(--paper); }
-.contact-grid { display: grid; grid-template-columns: minmax(265px, .75fr) minmax(0, 1.5fr); gap: 64px; }
+.contact-grid { display: grid; grid-template-columns: minmax(330px, .85fr) minmax(0, 1.5fr); gap: 0; }
+.contact-grid > div:first-child { padding: 34px; background: var(--sage); border: 1px solid var(--line); border-right: 0; border-radius: 5px 0 0 5px; }
 .contact-name { margin-top: 29px; font-size: 17px; color: var(--ink); }
 address { font-style: normal; font-size: 15px; margin-top: 12px; }
 address a, address p { display: grid; grid-template-columns: 18px minmax(0, 1fr); gap: 12px; align-items: start; }
@@ -151,7 +152,7 @@ address a:hover { text-decoration: underline; }
 address p { margin-top: 20px; }
 .contact-hours { display: grid; grid-template-columns: 18px minmax(0, 1fr); gap: 12px; align-items: start; margin-top: 18px; font-size: 12px; }
 .contact-hours .contact-icon { margin-top: 1px; }
-.map-container { overflow: hidden; min-height: 395px; border-radius: 5px; border: 1px solid #c4cfbb; background: #dce3d2; }
+.map-container { overflow: hidden; min-height: 395px; border-radius: 0 5px 5px 0; border: 1px solid var(--line); background: #dce3d2; }
 .map-container iframe { display: block; width: 100%; height: 100%; min-height: 395px; border: 0; }
 .site-footer { padding-block: 37px; text-align: center; font-family: var(--serif); font-size: 18px; color: var(--muted); }
 @keyframes botanical-sway {
@@ -171,7 +172,6 @@ address p { margin-top: 20px; }
   .hero-grid { gap: 50px; }
   h1 { font-size: 52px; }
   .approaches { column-gap: 44px; }
-  .contact-grid { gap: 45px; }
 }
 @media (max-width: 850px) {
   :root { scroll-padding-top: 24px; }
@@ -195,7 +195,7 @@ address p { margin-top: 20px; }
   .payment-info { padding-right: 204px; }
   .payment-info h3 { margin-right: -204px; }
   .payment-grid img { width: 180px; }
-  .contact-grid { gap: 30px; }
+  .contact-grid > div:first-child { padding: 26px; }
   .contact-grid h2 { font-size: 37px; }
 }
 @media (max-width: 620px) {
@@ -216,7 +216,10 @@ address p { margin-top: 20px; }
   .section { padding-block: 62px; }
   h2 { font-size: 39px; }
   h2 br { display: none; }
-  .about-grid, .contact-grid { grid-template-columns: 1fr; gap: 30px; }
+  .about-grid { grid-template-columns: 1fr; gap: 30px; }
+  .contact-grid { grid-template-columns: 1fr; }
+  .contact-grid > div:first-child { border-right: 1px solid var(--line); border-bottom: 0; border-radius: 5px 5px 0 0; }
+  .map-container { border-radius: 0 0 5px 5px; }
   .about-copy .lead { font-size: 18px; }
   .section-intro { display: block; margin-bottom: 32px; }
   .topics-grid { grid-template-columns: 1fr; gap: 28px; }
