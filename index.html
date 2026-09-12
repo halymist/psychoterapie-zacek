@@ -88,13 +88,39 @@
             <a class="button" href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2gF-J1KG7GhA5J-Fupkhoh07h63im_EaI9-vYgGFOuTz5iGeFIFIn6_LWjNhJBqwuUzpvz0xHn" target="_blank" rel="noopener noreferrer">Domluvit setkání <span aria-hidden="true">↗</span></a>
           </div>
         </div>
-        <figure class="hero-portrait">
-          <div class="portrait-frame"><img src="assets/martin.webp" width="765" height="1024" alt="Mgr. Martin Žáček" fetchpriority="high"></div>
-        </figure>
+        <div class="hero-art">
+          <svg class="botanical" viewBox="0 0 480 460" fill="none" aria-hidden="true" focusable="false">
+            <defs>
+              <radialGradient id="botanical-light"><stop stop-color="#e2d8b7" stop-opacity=".7"/><stop offset="1" stop-color="#e2d8b7" stop-opacity="0"/></radialGradient>
+              <linearGradient id="leaf-green" x1="120" y1="100" x2="320" y2="360" gradientUnits="userSpaceOnUse"><stop stop-color="#a4b198"/><stop offset=".55" stop-color="#6e896d"/><stop offset="1" stop-color="#365d48"/></linearGradient>
+              <linearGradient id="leaf-pale" x1="300" y1="80" x2="200" y2="380" gradientUnits="userSpaceOnUse"><stop stop-color="#c4cbb2"/><stop offset="1" stop-color="#809679"/></linearGradient>
+            </defs>
+            <ellipse cx="262" cy="224" rx="216" ry="214" fill="url(#botanical-light)"/>
+            <ellipse cx="248" cy="417" rx="74" ry="5" fill="#58704d" opacity=".08"/>
+            <g class="botanical-stem">
+              <path d="M243 414C215 329 259 246 253 172C250 132 258 102 275 65" stroke="#587451" stroke-width="2" stroke-linecap="round"/>
+              <g fill="url(#leaf-green)">
+                <path d="M242 350C194 355 153 328 148 286C191 283 227 304 242 350Z"/>
+                <path d="M248 265C196 262 158 224 165 175C214 182 246 220 248 265Z"/>
+                <path d="M254 175C221 162 209 127 223 96C250 110 260 143 254 175Z"/>
+                <path d="M263 102C253 76 265 49 291 36C299 64 286 90 263 102Z"/>
+              </g>
+              <g fill="url(#leaf-pale)">
+                <path d="M238 319C235 266 279 231 329 229C324 277 287 310 238 319Z"/>
+                <path d="M253 222C254 178 292 150 333 156C323 197 295 220 253 222Z"/>
+                <path d="M254 145C261 116 290 98 317 108C306 136 283 149 254 145Z"/>
+              </g>
+              <g stroke="#eff0de" stroke-opacity=".35" stroke-linecap="round">
+                <path d="M239 347L165 299M247 260L178 191M254 172L227 112M242 315L313 244M258 218L317 168M260 143L305 114"/>
+              </g>
+            </g>
+          </svg>
+          <button class="motion-toggle" type="button" aria-label="Pozastavit animaci" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path class="pause-symbol" d="M9 6v12M15 6v12"/><path class="play-symbol" d="m9 6 9 6-9 6Z"/></svg></button>
+        </div>
       </div>
     </section>
     <section class="section container about-grid" id="omne" aria-labelledby="about-title">
-      <div class="section-heading"><h2 id="about-title">O mně</h2></div>
+      <div class="section-heading"><h2 id="about-title">O mně</h2><figure class="about-portrait"><img src="assets/martin.webp" width="765" height="1024" alt="Mgr. Martin Žáček" loading="lazy"></figure></div>
       <div class="about-copy">
         <p class="lead">Jsem psycholog a v terapii pracuji s dospívajícími od 15 let i dospělými. Věnuji se psychologickému poradenství, terapii a pedagogické psychologii.</p>
         <p>Vystudoval jsem magisterský program psychologie na Univerzitě Palackého v Olomouci. Ve své práci vycházím z přístupu zaměřeného na člověka podle Carla Rogerse a krátkodobé kognitivně-behaviorální terapie.</p>

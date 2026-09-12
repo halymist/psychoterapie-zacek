@@ -1,6 +1,24 @@
 // Content stays visible without JavaScript. Each entrance plays only once.
 (() => {
   const preference = window.matchMedia('(prefers-reduced-motion: reduce)');
+  const artwork = document.querySelector('.hero-art');
+  const toggle = document.querySelector('.motion-toggle');
+  let paused = false;
+  let inView = true;
+  const updateArtwork = () => {
+    artwork.classList.toggle('is-still', paused || !inView || document.hidden || preference.matches);
+    toggle.hidden = preference.matches;
+    toggle.setAttribute('aria-pressed', String(paused));
+    toggle.setAttribute('aria-label', paused ? 'Spustit animaci' : 'Pozastavit animaci');
+  };
+  toggle.addEventListener('click', () => { paused = !paused; updateArtwork(); });
+  preference.addEventListener('change', updateArtwork);
+  document.addEventListener('visibilitychange', updateArtwork);
+  if (window.IntersectionObserver) {
+    new IntersectionObserver(([entry]) => { inView = entry.isIntersecting; updateArtwork(); }).observe(artwork);
+  }
+  updateArtwork();
+  artwork.classList.add('motion-ready');
   if (preference.matches || !window.IntersectionObserver || !Element.prototype.animate) return;
 
   const active = new Set();
@@ -21,7 +39,7 @@
 
   // Booking, payment, navigation and the map are immediately usable and still.
   document.querySelectorAll([
-    '.hero-copy', '.hero-portrait', '.about-grid > *',
+    '.hero-copy', '.hero-art', '.about-grid > *',
     '.topics-section .section-intro', '.topic', '.approach-grid > *',
     '.education-section .section-intro', '.education-grid > *',
     '.contact-grid > div:first-child', '.site-footer p'

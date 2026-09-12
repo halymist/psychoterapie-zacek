@@ -47,14 +47,21 @@ nav a:hover { color: var(--ink); text-decoration: underline; }
 nav .nav-booking { display: inline-flex; align-items: center; gap: 18px; padding: 9px 16px; border: 1px solid #96a58d; border-radius: 4px; color: var(--ink); }
 nav .nav-booking:hover { background: var(--sage); text-decoration: none; }
 .hero { position: relative; overflow: hidden; background: radial-gradient(ellipse at 89% 25%, #e0e6d7 0, #eef0e6 29%, transparent 66%), #f5f4ed; }
-.hero::after { content: ''; position: absolute; width: 720px; height: 930px; border: 1px solid #bac7b640; border-radius: 50%; transform: rotate(30deg); right: -195px; top: -135px; box-shadow: 0 0 0 40px #e4e9dc55, 0 0 0 41px #bac7b62b, 0 0 0 85px #e4e9dc33, 0 0 0 86px #bac7b626; pointer-events: none; }
 .hero-grid { position: relative; z-index: 1; display: grid; grid-template-columns: 1.2fr 1fr; align-items: center; gap: 95px; padding-block: 69px 57px; }
 .hero-copy { padding-bottom: 20px; }
 .hero-description { font-size: 17px; line-height: 1.9; max-width: 420px; margin-top: 27px; }
 .hero-actions { display: flex; align-items: center; gap: 31px; margin-top: 32px; }
-.hero-portrait { max-width: 390px; justify-self: end; width: 100%; }
-.portrait-frame { overflow: hidden; border-radius: 190px 190px 6px 6px; background: #e0e0d4; }
-.portrait-frame img { width: 100%; height: 433px; object-fit: cover; object-position: 50% 38%; }
+.hero-art { position: relative; width: 100%; max-width: 480px; justify-self: end; }
+.botanical { display: block; width: 100%; height: auto; }
+.botanical-stem { transform-origin: 243px 414px; }
+.motion-toggle { position: absolute; right: 0; bottom: 6px; display: grid; place-items: center; width: 32px; height: 32px; padding: 6px; border: 1px solid #a9b49b; border-radius: 50%; background: transparent; color: var(--green); cursor: pointer; }
+.motion-toggle[hidden], .play-symbol { display: none; }
+.motion-toggle[aria-pressed="true"] .pause-symbol { display: none; }
+.motion-toggle[aria-pressed="true"] .play-symbol { display: block; }
+.motion-toggle:hover { background: #e0e6d7; }
+.motion-toggle:focus-visible { outline: 3px solid #9b663b; outline-offset: 4px; }
+.about-portrait { margin-top: 30px; max-width: 295px; overflow: hidden; border-radius: 140px 140px 5px 5px; }
+.about-portrait img { width: 100%; height: 310px; object-fit: cover; object-position: 50% 38%; }
 .about-grid, .approach-grid { display: grid; grid-template-columns: 0.85fr 1.35fr; gap: 100px; }
 .about-copy .lead { font-size: 20px; line-height: 1.7; color: #3c4e42; }
 .section-heading > p { margin-top: 26px; max-width: 340px; }
@@ -122,12 +129,13 @@ address p { margin-top: 20px; }
 .map-container { overflow: hidden; min-height: 395px; border-radius: 5px; border: 1px solid #c4cfbb; background: #dce3d2; }
 .map-container iframe { display: block; width: 100%; height: 100%; min-height: 395px; border: 0; }
 .site-footer { padding-block: 37px; text-align: center; font-family: var(--serif); font-size: 18px; color: var(--muted); }
-@keyframes settle-background {
-  from { transform: translate(22px, 14px) rotate(27deg); opacity: .45; }
-  to { transform: translate(0, 0) rotate(30deg); opacity: 1; }
+@keyframes botanical-sway {
+  0%, 100% { transform: rotate(-3deg); }
+  50% { transform: rotate(3deg); }
 }
 @media (prefers-reduced-motion: no-preference) {
-  .hero::after { animation: settle-background 4.8s cubic-bezier(.22, 1, .36, 1) both; }
+  .hero-art.motion-ready .botanical-stem { animation: botanical-sway 12s ease-in-out infinite; }
+  .hero-art.is-still .botanical-stem { animation-play-state: paused; }
   .button { transition: background .3s ease, transform .3s ease; }
 }
 @media (min-width: 1600px) { .hero-grid { padding-block: 85px 70px; } }
@@ -137,8 +145,6 @@ address p { margin-top: 20px; }
   .wordmark { font-size: 19px; }
   .hero-grid { gap: 50px; }
   h1 { font-size: 59px; }
-  .hero-portrait { max-width: 345px; }
-  .portrait-frame img { height: 407px; }
   .about-grid, .approach-grid, .education-grid { gap: 60px; grid-template-columns: .9fr 1.2fr; }
   .contact-grid { gap: 45px; }
 }
@@ -151,7 +157,6 @@ address p { margin-top: 20px; }
   h1 { font-size: 48px; letter-spacing: -2px; }
   .hero-description { font-size: 15px; }
   .hero-actions { gap: 15px; flex-wrap: wrap; }
-  .portrait-frame img { height: 360px; }
   .section { padding-block: 75px; }
   .about-grid, .approach-grid, .education-grid { gap: 40px; grid-template-columns: 1fr 1.25fr; }
   .topics-grid { gap: 25px; }
@@ -176,9 +181,8 @@ address p { margin-top: 20px; }
   .hero-description { margin-top: 22px; max-width: 390px; font-size: 16px; }
   .hero-actions { margin-top: 26px; gap: 20px; }
   .button { padding-inline: 20px; gap: 25px; }
-  .hero-portrait { justify-self: center; max-width: 310px; }
-  .portrait-frame img { height: 340px; }
-  .hero::after { top: 250px; right: -370px; }
+  .hero-art { justify-self: center; max-width: 310px; }
+  .about-portrait { max-width: 270px; }
   .section { padding-block: 62px; }
   h2 { font-size: 39px; }
   h2 br { display: none; }
