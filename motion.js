@@ -35,7 +35,7 @@
   document.querySelectorAll([
     '.hero-copy', '.hero-art', '.about-grid > *',
     '.topics-section .section-intro', '.topic', '.approach-heading', '.approach',
-    '.education-section .section-intro', '.education-grid > *',
+    '.education-section .section-intro', '.education-timeline', '.course-group',
     '.contact-grid > div:first-child', '.site-footer p'
   ].join(',')).forEach(element => observer.observe(element));
 
