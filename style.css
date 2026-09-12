@@ -32,9 +32,6 @@ h4 { font-size: 15px; color: var(--ink); }
 p + p { margin-top: 17px; }
 .container { width: min(1160px, calc(100% - 112px)); margin-inline: auto; }
 .section { padding-block: 104px; }
-.text-link { display: inline-flex; align-items: center; gap: 22px; font-size: 14px; font-weight: 600; color: var(--green); text-decoration: none; padding-block: 5px; border-bottom: 1px solid #a9b4a5; }
-.text-link:hover { color: #1c3528; border-color: currentColor; }
-.text-link span { font-size: 19px; }
 .button { display: inline-flex; justify-content: space-between; align-items: center; gap: 36px; min-height: 54px; padding: 14px 24px; background: var(--green); color: white; font-size: 14px; font-weight: 550; text-decoration: none; border: 1px solid var(--green); border-radius: 4px; transition: background .18s, transform .18s; }
 .button span { font-size: 20px; line-height: 1; }
 .button:hover { background: #234333; transform: translateY(-2px); }
@@ -113,14 +110,13 @@ nav .nav-booking:hover { background: var(--sage); text-decoration: none; }
 .booking-terms p { max-width: 90ch; }
 .booking-terms p + p { margin-top: 10px; }
 .contact-section { background: #e7ecdf; }
-.contact-grid { display: grid; grid-template-columns: 1fr 1.1fr; gap: 85px; }
+.contact-grid { display: grid; grid-template-columns: minmax(250px, .75fr) minmax(0, 1.5fr); gap: 64px; }
 .contact-name { margin-top: 29px; font-size: 17px; color: var(--ink); }
 address { font-style: normal; font-size: 15px; margin-top: 12px; }
 address a { display: block; width: fit-content; text-decoration: none; overflow-wrap: anywhere; }
 address a:hover { text-decoration: underline; }
 address p { margin-top: 20px; }
 .contact-hours { margin-top: 18px; font-size: 12px; }
-.contact-grid .text-link { margin-top: 18px; }
 .map-container { overflow: hidden; min-height: 395px; border-radius: 5px; border: 1px solid #c4cfbb; background: #dce3d2; }
 .map-container iframe { display: block; width: 100%; height: 100%; min-height: 395px; border: 0; }
 .site-footer { padding-block: 37px; text-align: center; font-family: var(--serif); font-size: 18px; color: var(--muted); }
@@ -161,7 +157,7 @@ address p { margin-top: 20px; }
   .booking-grid { grid-template-columns: 1fr; gap: 32px; }
   .payment-grid { grid-template-columns: 1fr 180px; }
   .payment-grid img { width: 180px; }
-  .contact-grid { gap: 30px; grid-template-columns: 1fr 1fr; }
+  .contact-grid { gap: 30px; }
   .contact-grid h2 { font-size: 37px; }
 }
 @media (max-width: 620px) {
