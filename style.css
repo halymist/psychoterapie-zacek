@@ -53,11 +53,12 @@ nav .nav-booking:hover { text-decoration: underline; }
 .hero-art { position: relative; width: 100%; max-width: 480px; justify-self: end; }
 .botanical { display: block; width: 100%; height: auto; }
 .botanical-stem { transform-origin: 243px 414px; }
-.about-portrait { overflow: hidden; border-radius: 6px; background: #e0e0d4; }
-.about-portrait img { width: 100%; height: auto; aspect-ratio: 4 / 5; max-height: 440px; object-fit: cover; object-position: 50% 38%; }
+.about-portrait { position: relative; isolation: isolate; margin-right: 20px; }
+.about-portrait::before { content: ''; position: absolute; inset: 24px -20px -20px 24px; z-index: -1; background: #e7ecdf; border-radius: 45% 45% 8px 8px; }
+.about-portrait img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 5; max-height: 460px; object-fit: cover; object-position: 50% 38%; border-radius: 45% 45% 8px 8px; }
 .about-grid { display: grid; max-width: 1040px; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: 64px; align-items: center; }
-.about-copy h2 { margin-bottom: 24px; }
-.about-copy .lead { font-size: 20px; line-height: 1.7; color: #3c4e42; }
+.about-copy h2 { margin-bottom: 26px; }
+.about-copy .lead { font-family: var(--serif); font-size: 25px; line-height: 1.5; color: var(--ink); margin-bottom: 28px; }
 .section-heading > p { margin-top: 26px; max-width: 340px; }
 .topics-section { padding-block: 16px 64px; }
 .section-intro { margin-bottom: 42px; }
@@ -213,7 +214,7 @@ address p { margin-top: 20px; }
   .hero-description { margin: 22px auto 0; max-width: 390px; font-size: 16px; }
   .button { padding-inline: 20px; gap: 25px; }
   .hero-art { justify-self: center; max-width: 310px; }
-  .about-portrait { order: 1; width: 100%; max-width: 350px; justify-self: center; }
+  .about-portrait { order: 1; width: calc(100% - 20px); max-width: 330px; justify-self: center; margin-bottom: 20px; }
   .section { padding-block: 62px; }
   h2 { font-size: 39px; }
   h2 br { display: none; }
@@ -221,7 +222,7 @@ address p { margin-top: 20px; }
   .contact-grid { grid-template-columns: 1fr; }
   .contact-grid > div:first-child { border-right: 1px solid var(--line); border-bottom: 0; border-radius: 5px 5px 0 0; }
   .map-container { border-radius: 0 0 5px 5px; }
-  .about-copy .lead { font-size: 18px; }
+  .about-copy .lead { font-size: 23px; }
   .section-intro { display: block; margin-bottom: 32px; }
   .topics-grid { grid-template-columns: 1fr; gap: 28px; }
   .topic { padding-top: 23px; }
