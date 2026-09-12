@@ -32,7 +32,6 @@ h4 { font-size: 15px; color: var(--ink); }
 p + p { margin-top: 17px; }
 .container { width: min(1160px, calc(100% - 112px)); margin-inline: auto; }
 .section { padding-block: 104px; }
-.eyebrow { font-size: 11px; font-weight: 650; letter-spacing: 2px; color: #5d705e; line-height: 1.6; margin-bottom: 23px; }
 .text-link { display: inline-flex; align-items: center; gap: 22px; font-size: 14px; font-weight: 600; color: var(--green); text-decoration: none; padding-block: 5px; border-bottom: 1px solid #a9b4a5; }
 .text-link:hover { color: #1c3528; border-color: currentColor; }
 .text-link span { font-size: 19px; }
@@ -46,7 +45,7 @@ p + p { margin-top: 17px; }
 .header-inner { min-height: 94px; display: flex; align-items: center; justify-content: space-between; gap: 32px; }
 .wordmark { display: inline-flex; align-items: center; gap: 14px; text-decoration: none; color: var(--ink); font-family: var(--serif); font-size: 22px; line-height: 1.4; flex-shrink: 0; }
 .brand-mark { font-family: var(--serif); font-size: 42px; font-style: italic; line-height: 1; padding-right: 15px; border-right: 1px solid #cbd3c5; }
-.wordmark small { display: block; font-family: var(--sans); font-size: 8px; font-weight: 550; letter-spacing: 1.45px; line-height: 2; }
+.wordmark small { display: block; font-family: var(--sans); font-size: 12px; font-weight: 400; line-height: 1.7; color: var(--muted); }
 nav { display: flex; align-items: center; gap: 29px; }
 nav a { text-decoration: none; font-size: 13px; font-weight: 500; padding-block: 10px; white-space: nowrap; }
 nav a:hover { color: var(--ink); text-decoration: underline; }
@@ -56,43 +55,30 @@ nav .nav-booking:hover { background: var(--sage); text-decoration: none; }
 .hero::after { content: ''; position: absolute; width: 720px; height: 930px; border: 1px solid #bac7b640; border-radius: 50%; transform: rotate(30deg); right: -195px; top: -135px; box-shadow: 0 0 0 40px #e4e9dc55, 0 0 0 41px #bac7b62b, 0 0 0 85px #e4e9dc33, 0 0 0 86px #bac7b626; pointer-events: none; }
 .hero-grid { position: relative; z-index: 1; display: grid; grid-template-columns: 1.2fr 1fr; align-items: center; gap: 95px; padding-block: 69px 57px; }
 .hero-copy { padding-bottom: 20px; }
-.hero .eyebrow { display: flex; align-items: center; gap: 12px; margin-bottom: 29px; }
-.small-line { width: 28px; height: 1px; background: #71836b; }
 .hero-description { font-size: 17px; line-height: 1.9; max-width: 420px; margin-top: 27px; }
 .hero-actions { display: flex; align-items: center; gap: 31px; margin-top: 32px; }
-.hero-actions .text-link { border: 0; }
 .hero-note { font-size: 12px; color: #66715f; line-height: 1.9; margin-top: 28px; }
 .hero-portrait { max-width: 390px; justify-self: end; width: 100%; }
 .portrait-frame { overflow: hidden; border-radius: 190px 190px 6px 6px; background: #e0e0d4; }
 .portrait-frame img { width: 100%; height: 433px; object-fit: cover; object-position: 50% 38%; }
 .hero-portrait figcaption { text-align: center; padding-top: 21px; }
 .hero-portrait strong { display: block; font-family: var(--serif); font-weight: 400; font-size: 24px; color: var(--ink); }
-.hero-portrait figcaption span { display: block; font-size: 11px; margin-top: 3px; letter-spacing: .3px; }
-.hero-bottom { position: relative; z-index: 1; border-top: 1px solid #d4ddcd; display: flex; justify-content: space-between; padding-block: 20px; font-size: 11px; letter-spacing: .3px; color: #61715e; }
-.hero-bottom a { text-decoration: none; }
-.hero-bottom a:hover { text-decoration: underline; }
-.hero-bottom a span { margin-left: 20px; }
 .about-grid, .approach-grid, .booking-grid { display: grid; grid-template-columns: 0.85fr 1.35fr; gap: 100px; }
 .about-copy .lead { font-size: 20px; line-height: 1.7; color: #3c4e42; }
-.about-copy .text-link { margin-top: 22px; }
-.section-heading > p:not(.eyebrow) { margin-top: 26px; max-width: 340px; }
+.section-heading > p { margin-top: 26px; max-width: 340px; }
 .topics-section { background: var(--sage); }
-.section-intro { display: flex; justify-content: space-between; align-items: end; gap: 40px; margin-bottom: 49px; }
-.section-intro > p { font-size: 14px; margin-bottom: 3px; }
+.section-intro { margin-bottom: 42px; }
 .topics-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 44px; }
 .topic { border-top: 1px solid #bac8b3; padding-top: 22px; }
-.topic-number { font-size: 12px; color: #64745d; }
-.topic h3 { font-family: var(--serif); font-size: 27px; margin-top: 23px; margin-bottom: 15px; }
+.topic h3 { font-family: var(--serif); font-size: 27px; margin-bottom: 15px; }
 .topic p { font-size: 15px; }
 .approaches article + article { margin-top: 36px; padding-top: 36px; border-top: 1px solid var(--line); }
-.approach-label { font-size: 11px; font-weight: 600; letter-spacing: 1.2px; color: #62765c; }
-.approaches h3 { margin-block: 10px 16px; font-family: var(--serif); font-size: 29px; }
+.approaches h3 { margin-bottom: 16px; font-family: var(--serif); font-size: 29px; }
 .education-section { background: #f0efe8; }
 .education-grid { display: grid; grid-template-columns: 0.85fr 1.35fr; gap: 100px; }
 .university { align-self: start; padding: 36px; border: 1px solid #dddfd4; background: #faf9f5; border-radius: 5px; }
 .university img { width: 250px; height: auto; margin-block: 6px 34px; }
 .university h3 { font-family: var(--serif); font-size: 29px; }
-.university > p { font-size: 13px; margin-top: 5px; }
 .degrees { margin: 26px 0 0; font-size: 13px; }
 .degrees div + div { margin-top: 17px; }
 .degrees dt { color: var(--ink); }
@@ -114,11 +100,11 @@ summary:hover { color: #1d3528; text-decoration: underline; text-underline-offse
 .details-content li + li { margin-top: 8px; }
 .booking-grid .email-link { margin-top: 25px; font-size: 13px; overflow-wrap: anywhere; gap: 10px; }
 .session-card { background: var(--sage); padding: 32px 36px 36px; border: 1px solid #dce2d6; border-radius: 5px; }
-.session-card .eyebrow { font-size: 10px; margin-bottom: 13px; }
+.session-card h3 { font-size: 15px; margin-bottom: 16px; }
 .price { display: flex; gap: 16px; align-items: baseline; color: var(--ink); }
 .price strong { font-family: var(--serif); font-size: 48px; font-weight: 400; letter-spacing: -1px; }
 .price span { color: #65715f; font-size: 14px; }
-.session-card > p:not(.eyebrow) { font-size: 13px; margin-top: 5px; }
+.session-card > p { font-size: 13px; margin-top: 5px; }
 .session-card .button { display: flex; margin-top: 26px; }
 .payment-details { border-bottom: 1px solid var(--line); margin-top: 15px; }
 .payment-grid { display: grid; grid-template-columns: 1fr 160px; gap: 22px; align-items: start; }
@@ -140,8 +126,6 @@ address p { margin-top: 20px; }
 .footer-inner { display: flex; align-items: center; justify-content: space-between; gap: 30px; }
 .site-footer .wordmark { font-size: 19px; }
 .site-footer .brand-mark { font-size: 36px; }
-.site-footer .wordmark small { font-size: 7px; }
-.site-footer p { font-family: var(--serif); font-size: 16px; font-style: italic; color: #6c7766; }
 .back-top { font-size: 12px; text-decoration: none; }
 .back-top:hover { text-decoration: underline; }
 .back-top span { margin-left: 12px; }
@@ -150,7 +134,6 @@ address p { margin-top: 20px; }
   .container { width: calc(100% - 72px); }
   nav { gap: 17px; }
   .wordmark { font-size: 19px; }
-  .wordmark small { font-size: 7px; }
   .hero-grid { gap: 50px; }
   h1 { font-size: 59px; }
   .hero-portrait { max-width: 345px; }
@@ -169,7 +152,6 @@ address p { margin-top: 20px; }
   .hero-description { font-size: 15px; }
   .hero-actions { gap: 15px; flex-wrap: wrap; }
   .portrait-frame img { height: 360px; }
-  .hero-portrait figcaption span { font-size: 10px; }
   .section { padding-block: 75px; }
   .about-grid, .approach-grid, .booking-grid, .education-grid { gap: 40px; grid-template-columns: 1fr 1.25fr; }
   .topics-grid { gap: 25px; }
@@ -187,14 +169,12 @@ address p { margin-top: 20px; }
   .container { width: calc(100% - 40px); }
   .header-inner { align-items: flex-start; gap: 14px; padding-top: 18px; }
   .wordmark { font-size: 21px; }
-  .wordmark small { font-size: 7px; }
   .brand-mark { font-size: 37px; }
   nav { width: 100%; gap: 0 17px; justify-content: flex-start; }
   nav a { font-size: 12px; padding-block: 9px; }
   nav .nav-booking { border: 0; padding: 9px 0; gap: 6px; }
   .hero-grid { grid-template-columns: 1fr; gap: 35px; padding-block: 45px 30px; }
   .hero-copy { padding: 0; }
-  .hero .eyebrow { margin-bottom: 23px; font-size: 10px; }
   h1 { font-size: clamp(43px, 10.7vw, 62px); letter-spacing: -2px; }
   .hero-description { margin-top: 22px; max-width: 390px; font-size: 16px; }
   .hero-actions { margin-top: 26px; gap: 20px; }
@@ -204,25 +184,17 @@ address p { margin-top: 20px; }
   .portrait-frame img { height: 340px; }
   .hero-portrait figcaption { padding-top: 15px; }
   .hero-portrait strong { font-size: 23px; }
-  .hero-portrait figcaption span { font-size: 11px; }
-  .hero-bottom { font-size: 10px; gap: 10px; padding-block: 17px; }
-  .hero-bottom a { white-space: nowrap; }
-  .hero-bottom a span { margin-left: 7px; }
   .hero::after { top: 250px; right: -370px; }
   .section { padding-block: 62px; }
-  .eyebrow { font-size: 10px; margin-bottom: 17px; }
   h2 { font-size: 39px; }
   h2 br { display: none; }
   .about-grid, .approach-grid, .booking-grid, .education-grid, .contact-grid { grid-template-columns: 1fr; gap: 30px; }
   .about-copy .lead { font-size: 18px; }
   .section-intro { display: block; margin-bottom: 32px; }
-  .section-intro > p { margin-top: 22px; }
-  .section-intro > p br { display: none; }
   .topics-grid { grid-template-columns: 1fr; gap: 28px; }
-  .topic { position: relative; padding: 23px 0 0 39px; }
-  .topic-number { position: absolute; top: 29px; left: 0; }
+  .topic { padding-top: 23px; }
   .topic h3 { margin: 0 0 10px; font-size: 27px; }
-  .section-heading > p:not(.eyebrow) { margin-top: 23px; max-width: none; }
+  .section-heading > p { margin-top: 23px; max-width: none; }
   .approaches h3 { font-size: 27px; }
   .university { padding: 30px; }
   .university img { max-width: 225px; margin-bottom: 28px; }
@@ -235,7 +207,6 @@ address p { margin-top: 20px; }
   .map-container, .map-container iframe { min-height: 310px; }
   .site-footer { padding-block: 30px; }
   .footer-inner { align-items: flex-start; gap: 25px; }
-  .site-footer p { order: 3; width: 100%; padding-top: 22px; border-top: 1px solid var(--line); }
   .back-top { font-size: 11px; padding-top: 8px; }
 }
 @media (prefers-reduced-motion: reduce) {
