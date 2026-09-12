@@ -190,9 +190,9 @@ address p { margin-top: 20px; }
   nav a { font-size: 12px; padding-block: 9px; }
   nav .nav-booking { border: 0; padding: 9px 0; gap: 6px; }
   .hero-grid { grid-template-columns: 1fr; gap: 35px; padding-block: 45px 30px; }
-  .hero-copy { padding: 0; }
+  .hero-copy { padding: 0; text-align: center; }
   h1 { font-size: clamp(43px, 10.7vw, 62px); letter-spacing: -2px; }
-  .hero-description { margin-top: 22px; max-width: 390px; font-size: 16px; }
+  .hero-description { margin: 22px auto 0; max-width: 390px; font-size: 16px; }
   .button { padding-inline: 20px; gap: 25px; }
   .hero-art { justify-self: center; max-width: 310px; }
   .about-portrait { order: 1; width: 100%; max-width: 350px; justify-self: center; }
