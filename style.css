@@ -1,5 +1,5 @@
 :root {
-  --paper: #faf9f5;
+  --paper: #f5f4ed;
   --ink: #283f37;
   --body: #56615a;
   --green: #355748;
@@ -10,7 +10,10 @@
   --sans: 'Segoe UI', system-ui, -apple-system, sans-serif;
   font-family: var(--sans);
   color: var(--body);
-  background: var(--paper);
+  background: radial-gradient(ellipse at 89% 25%, #e0e6d7 0, #eef0e6 29%, transparent 66%), var(--paper);
+  background-size: 100vw 100vh;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
   font-synthesis: none;
   scroll-behavior: smooth;
   scroll-padding-top: 110px;
@@ -37,7 +40,7 @@ p + p { margin-top: 17px; }
 .button:active { transform: translateY(0); }
 .skip-link { position: fixed; top: -100px; left: 20px; background: var(--green); color: white; z-index: 10; padding: 12px 20px; }
 .skip-link:focus { top: 12px; }
-.site-header { position: sticky; top: 0; background: #faf9f5f5; backdrop-filter: blur(12px); border-bottom: 1px solid #e5e7df; z-index: 5; }
+.site-header { position: sticky; top: 0; background: #f5f4edf5; backdrop-filter: blur(12px); border-bottom: 1px solid #e5e7df; z-index: 5; }
 .header-inner { min-height: 94px; display: flex; align-items: center; justify-content: space-between; gap: 32px; }
 .wordmark { display: inline-flex; align-items: center; text-decoration: none; color: var(--ink); font-family: var(--serif); font-size: 22px; line-height: 1.4; flex-shrink: 0; }
 nav { display: flex; align-items: center; gap: 29px; }
