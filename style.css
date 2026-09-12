@@ -118,6 +118,12 @@ nav .nav-booking:hover { background: var(--sage); text-decoration: none; }
 .booking-grid > h2, .booking-terms { grid-column: 1 / -1; }
 .session-info, .payment-info { border-top: 1px solid var(--line); padding-top: 26px; }
 .session-info h3, .payment-info h3 { font-size: 16px; font-weight: 500; margin-bottom: 20px; }
+.booking-step { display: flex; align-items: center; gap: 12px; }
+.booking-step > span { display: inline-grid; place-items: center; flex: 0 0 30px; height: 30px; border: 1px solid #a9b7a1; border-radius: 50%; font-family: var(--serif); font-size: 18px; }
+.session-info { position: relative; }
+.session-info::after { content: '→'; position: absolute; top: 29px; right: -47px; color: #8b9e80; font-size: 25px; line-height: 1; }
+.session-info .price { margin-top: 22px; }
+.payment-example { color: var(--muted); font-size: 13px; }
 .price { display: flex; flex-wrap: wrap; gap: 4px 16px; align-items: baseline; color: var(--ink); }
 .price strong { font-family: var(--serif); font-size: 60px; line-height: 1.2; font-weight: 400; letter-spacing: -2px; }
 .price span { color: var(--muted); font-size: 14px; }
@@ -182,6 +188,7 @@ address p { margin-top: 20px; }
   .topics-grid { gap: 25px; }
   .topic h3 { font-size: 23px; }
   .booking-grid { grid-template-columns: 1fr; gap: 32px; }
+  .session-info::after { content: '↓'; top: auto; bottom: -30px; right: auto; left: 7px; font-size: 22px; }
   .payment-grid { grid-template-columns: 1fr 180px; }
   .payment-grid img { width: 180px; }
   .contact-grid { gap: 30px; }
