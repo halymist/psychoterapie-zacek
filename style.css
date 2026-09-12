@@ -43,8 +43,7 @@ p + p { margin-top: 17px; }
 .skip-link:focus { top: 12px; }
 .site-header { position: sticky; top: 0; background: #faf9f5f5; backdrop-filter: blur(12px); border-bottom: 1px solid #e5e7df; z-index: 5; }
 .header-inner { min-height: 94px; display: flex; align-items: center; justify-content: space-between; gap: 32px; }
-.wordmark { display: inline-flex; align-items: center; gap: 14px; text-decoration: none; color: var(--ink); font-family: var(--serif); font-size: 22px; line-height: 1.4; flex-shrink: 0; }
-.brand-mark { font-family: var(--serif); font-size: 42px; font-style: italic; line-height: 1; padding-right: 15px; border-right: 1px solid #cbd3c5; }
+.wordmark { display: inline-flex; align-items: center; text-decoration: none; color: var(--ink); font-family: var(--serif); font-size: 22px; line-height: 1.4; flex-shrink: 0; }
 nav { display: flex; align-items: center; gap: 29px; }
 nav a { text-decoration: none; font-size: 13px; font-weight: 500; padding-block: 10px; white-space: nowrap; }
 nav a:hover { color: var(--ink); text-decoration: underline; }
@@ -173,7 +172,6 @@ address p { margin-top: 20px; }
   .container { width: calc(100% - 40px); }
   .header-inner { align-items: flex-start; gap: 14px; padding-top: 18px; }
   .wordmark { font-size: 21px; }
-  .brand-mark { font-size: 37px; }
   nav { width: 100%; gap: 0 17px; justify-content: flex-start; }
   nav a { font-size: 12px; padding-block: 9px; }
   nav .nav-booking { border: 0; padding: 9px 0; gap: 6px; }
