@@ -65,8 +65,9 @@ nav .nav-booking:hover { background: var(--sage); text-decoration: none; }
 .topic h3 { font-family: var(--serif); font-size: 27px; margin-bottom: 15px; }
 .topic p { font-size: 15px; }
 .approach-section, .booking-section, .site-footer { background: var(--sage); }
-.approach-heading { text-align: center; max-width: 660px; margin: 0 auto 42px; }
-.approach-heading h2 { font-size: clamp(22px, 2.1vw, 28px); line-height: 1.5; letter-spacing: -.35px; color: var(--body); text-wrap: balance; }
+.approach-heading { text-align: center; max-width: 620px; margin: 0 auto 48px; }
+.approach-heading h2 { font-size: clamp(26px, 2.5vw, 34px); line-height: 1.35; letter-spacing: -.35px; text-wrap: balance; }
+.approach-heading p { margin-top: 20px; font-size: 16px; line-height: 1.8; text-wrap: pretty; }
 .approaches { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 72px; }
 .approach { display: grid; grid-template-rows: subgrid; grid-row: span 4; }
 .approaches h3 { min-height: 2.8em; text-align: center; font-family: var(--serif); font-size: 29px; }
