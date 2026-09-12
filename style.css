@@ -110,10 +110,13 @@ nav .nav-booking:hover { background: var(--sage); text-decoration: none; }
 .booking-terms p { max-width: 90ch; }
 .booking-terms p + p { margin-top: 10px; }
 .contact-section { background: #e7ecdf; }
-.contact-grid { display: grid; grid-template-columns: minmax(250px, .75fr) minmax(0, 1.5fr); gap: 64px; }
+.contact-grid { display: grid; grid-template-columns: minmax(265px, .75fr) minmax(0, 1.5fr); gap: 64px; }
 .contact-name { margin-top: 29px; font-size: 17px; color: var(--ink); }
 address { font-style: normal; font-size: 15px; margin-top: 12px; }
-address a { display: block; width: fit-content; text-decoration: none; overflow-wrap: anywhere; }
+address a, address p { display: grid; grid-template-columns: 18px minmax(0, 1fr); gap: 12px; align-items: start; }
+address a { width: fit-content; max-width: 100%; text-decoration: none; overflow-wrap: anywhere; }
+address a + a { margin-top: 10px; }
+.contact-icon { width: 18px; height: 18px; margin-top: 4px; color: var(--green); }
 address a:hover { text-decoration: underline; }
 address p { margin-top: 20px; }
 .contact-hours { margin-top: 18px; font-size: 12px; }
