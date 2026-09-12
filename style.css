@@ -95,7 +95,6 @@ nav .nav-booking:hover { background: var(--sage); text-decoration: none; }
 .education-date { display: flex; align-items: center; flex-wrap: wrap; gap: 6px 12px; min-height: 28px; margin-bottom: 15px; color: var(--green); font-size: 14px; }
 .education-date span { font-size: 11px; border-radius: 3px; background: var(--sage); padding: 3px 8px; }
 .education-step h3 { font-family: var(--serif); font-size: 25px; margin-bottom: 18px; }
-.education-provider { color: var(--green); font-size: 13px; }
 .degrees { margin: 0; font-size: 13px; }
 .degrees div { display: flex; flex-wrap: wrap; gap: 4px 16px; align-items: baseline; }
 .degrees div + div { margin-top: 8px; }
@@ -103,7 +102,7 @@ nav .nav-booking:hover { background: var(--sage); text-decoration: none; }
 .degrees dd { margin: 0; color: var(--muted); }
 .university-logo { display: block; width: 195px; max-width: 100%; margin-top: 18px; }
 .provider-logo { display: block; width: fit-content; max-width: 100%; margin-top: 18px; }
-.provider-logo img { display: block; object-fit: contain; object-position: left center; max-width: 100%; height: auto; }
+.provider-logo img { display: block; object-fit: contain; object-position: left center; max-width: 100%; height: auto; mix-blend-mode: multiply; }
 .actplus-logo img { width: 145px; }
 .pca-logo img { width: 130px; }
 .npi-logo { margin: 0 0 22px; }
