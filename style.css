@@ -116,21 +116,24 @@ nav .nav-booking:hover { background: var(--sage); text-decoration: none; }
 .course-group article + article { margin-top: 30px; }
 .booking-grid { display: grid; grid-template-columns: .9fr 1.25fr; gap: 40px 64px; align-items: start; }
 .booking-grid > h2, .booking-terms { grid-column: 1 / -1; }
-.session-info, .payment-info { border-top: 1px solid var(--line); padding-top: 26px; }
+.session-info, .payment-info { padding-top: 6px; }
 .session-info h3, .payment-info h3 { font-size: 16px; font-weight: 500; margin-bottom: 20px; }
 .price { display: flex; flex-wrap: wrap; gap: 4px 16px; align-items: baseline; color: var(--ink); }
 .price strong { font-family: var(--serif); font-size: 60px; line-height: 1.2; font-weight: 400; letter-spacing: -2px; }
 .price span { color: var(--muted); font-size: 14px; }
 .session-info > p { font-size: 14px; margin-top: 14px; }
-.session-info .button { display: flex; margin-top: 28px; }
+.session-info .button { display: flex; max-width: 340px; margin-top: 28px; }
 .payment-info { font-size: 14px; }
-.payment-grid { display: grid; grid-template-columns: minmax(0, 1fr) 140px; gap: 24px; align-items: start; }
+.payment-grid { display: grid; grid-template-columns: 140px minmax(0, 1fr); gap: 28px; align-items: start; }
 .payment-grid img { width: 140px; border-radius: 3px; }
 .payment-grid strong { font-weight: 500; color: var(--ink); }
 .booking-terms { border-top: 1px solid var(--line); padding-top: 24px; font-size: 13px; line-height: 1.8; }
-.booking-terms h3 { font-size: 14px; font-weight: 500; margin-bottom: 12px; }
-.booking-terms p { max-width: 90ch; }
-.booking-terms p + p { margin-top: 10px; }
+.payment-confirmation { margin-top: 22px; color: var(--green); }
+.booking-deadlines { display: grid; grid-template-columns: .9fr 1.25fr; gap: 64px; margin: 0; }
+.booking-deadlines dt { font-family: var(--serif); font-size: 28px; color: var(--ink); }
+.booking-deadlines dt span { font-family: var(--sans); font-size: 13px; color: var(--muted); margin-left: 8px; }
+.booking-deadlines dd { margin: 8px 0 0; max-width: 62ch; }
+.booking-consent { margin-top: 28px; font-size: 12px; }
 .contact-section { background: var(--paper); }
 .contact-grid { display: grid; grid-template-columns: minmax(265px, .75fr) minmax(0, 1.5fr); gap: 64px; }
 .contact-name { margin-top: 29px; font-size: 17px; color: var(--ink); }
@@ -183,8 +186,7 @@ address p { margin-top: 20px; }
   .topics-grid { gap: 25px; }
   .topic h3 { font-size: 23px; }
   .booking-grid { grid-template-columns: 1fr; gap: 32px; }
-  .payment-grid { grid-template-columns: 1fr 180px; }
-  .payment-grid img { width: 180px; }
+  .booking-deadlines { gap: 32px; grid-template-columns: 1fr 1fr; }
   .contact-grid { gap: 30px; }
   .contact-grid h2 { font-size: 37px; }
 }
@@ -225,8 +227,9 @@ address p { margin-top: 20px; }
   .education-step h3 { margin-bottom: 14px; }
   .courses-grid { grid-template-columns: 1fr; gap: 30px; }
   .price strong { font-size: 45px; }
-  .payment-grid { grid-template-columns: 1fr; }
-  .payment-grid img { width: 180px; }
+  .payment-grid { grid-template-columns: 110px minmax(0, 1fr); gap: 18px; }
+  .payment-grid img { width: 110px; }
+  .booking-deadlines { grid-template-columns: 1fr; gap: 24px; }
   .contact-grid h2 { font-size: 39px; }
   .map-container, .map-container iframe { min-height: 310px; }
   .site-footer { padding-block: 30px; }
