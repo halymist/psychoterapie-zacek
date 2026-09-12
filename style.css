@@ -115,14 +115,17 @@ nav .nav-booking:hover { background: var(--sage); text-decoration: none; }
 .course-group li::marker { color: #8a9d7d; }
 .course-group article + article { margin-top: 30px; }
 .booking-grid { display: grid; grid-template-columns: .9fr 1.25fr; gap: 40px 64px; align-items: start; }
-.booking-grid > h2, .booking-terms { grid-column: 1 / -1; }
+.booking-grid > h2, .booking-overview, .booking-terms { grid-column: 1 / -1; }
+.booking-overview { display: grid; grid-template-columns: .9fr 1.25fr; gap: 24px 64px; align-items: center; }
+.booking-overview > div > p { margin-bottom: 12px; font-size: 16px; color: var(--ink); }
+.session-location strong { font-weight: 500; color: var(--ink); font-size: 20px; }
+.booking-overview .session-location p { margin: 8px 0 0; color: var(--muted); font-size: 14px; }
 .session-info, .payment-info { border-top: 1px solid var(--line); padding-top: 26px; }
 .session-info h3, .payment-info h3 { font-size: 16px; font-weight: 500; margin-bottom: 20px; }
 .booking-step { display: flex; align-items: center; gap: 12px; }
 .booking-step > span { display: inline-grid; place-items: center; flex: 0 0 30px; height: 30px; border: 1px solid #a9b7a1; border-radius: 50%; font-family: var(--serif); font-size: 18px; }
 .session-info { position: relative; }
 .session-info::after { content: '→'; position: absolute; top: 29px; right: -47px; color: #8b9e80; font-size: 25px; line-height: 1; }
-.session-info .price { margin-top: 22px; }
 .payment-example { color: var(--muted); font-size: 13px; }
 .price { display: flex; flex-wrap: wrap; gap: 4px 16px; align-items: baseline; color: var(--ink); }
 .price strong { font-family: var(--serif); font-size: 60px; line-height: 1.2; font-weight: 400; letter-spacing: -2px; }
@@ -188,6 +191,7 @@ address p { margin-top: 20px; }
   .topics-grid { gap: 25px; }
   .topic h3 { font-size: 23px; }
   .booking-grid { grid-template-columns: 1fr; gap: 32px; }
+  .booking-overview { grid-template-columns: 1fr; }
   .session-info::after { content: '↓'; top: auto; bottom: -30px; right: auto; left: 7px; font-size: 22px; }
   .payment-grid { grid-template-columns: 1fr 180px; }
   .payment-grid img { width: 180px; }
