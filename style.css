@@ -55,8 +55,6 @@ nav .nav-booking:hover { background: var(--sage); text-decoration: none; }
 .hero-portrait { max-width: 390px; justify-self: end; width: 100%; }
 .portrait-frame { overflow: hidden; border-radius: 190px 190px 6px 6px; background: #e0e0d4; }
 .portrait-frame img { width: 100%; height: 433px; object-fit: cover; object-position: 50% 38%; }
-.hero-portrait figcaption { text-align: center; padding-top: 21px; }
-.hero-portrait strong { display: block; font-family: var(--serif); font-weight: 400; font-size: 24px; color: var(--ink); }
 .about-grid, .approach-grid { display: grid; grid-template-columns: 0.85fr 1.35fr; gap: 100px; }
 .about-copy .lead { font-size: 20px; line-height: 1.7; color: #3c4e42; }
 .section-heading > p { margin-top: 26px; max-width: 340px; }
@@ -180,8 +178,6 @@ address p { margin-top: 20px; }
   .button { padding-inline: 20px; gap: 25px; }
   .hero-portrait { justify-self: center; max-width: 310px; }
   .portrait-frame img { height: 340px; }
-  .hero-portrait figcaption { padding-top: 15px; }
-  .hero-portrait strong { font-size: 23px; }
   .hero::after { top: 250px; right: -370px; }
   .section { padding-block: 62px; }
   h2 { font-size: 39px; }
