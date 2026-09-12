@@ -18,8 +18,8 @@
 * { box-sizing: border-box; }
 body { margin: 0; font-size: 16px; line-height: 1.75; }
 a { color: inherit; text-underline-offset: 5px; }
-a, summary { -webkit-tap-highlight-color: transparent; }
-a:focus-visible, summary:focus-visible { outline: 3px solid #9b663b; outline-offset: 6px; }
+a { -webkit-tap-highlight-color: transparent; }
+a:focus-visible { outline: 3px solid #9b663b; outline-offset: 6px; }
 img { display: block; max-width: 100%; height: auto; }
 h1, h2, h3, h4, p, figure { margin: 0; }
 h1, h2, h3 { color: var(--ink); }
@@ -86,19 +86,15 @@ nav .nav-booking:hover { background: var(--sage); text-decoration: none; }
 .training-date span { margin-left: 16px; font-size: 10px; border: 1px solid #bdc8b4; border-radius: 3px; padding: 3px 7px; }
 .training h3 { font-size: 19px; margin-bottom: 9px; }
 .training > p:last-child { font-size: 14px; }
-summary { cursor: pointer; list-style: none; display: flex; align-items: center; justify-content: space-between; gap: 20px; padding-block: 18px; color: var(--ink); font-size: 14px; font-weight: 550; }
-summary::-webkit-details-marker { display: none; }
-summary > span { font-size: 23px; font-weight: 300; transition: transform .2s; }
-details[open] > summary > span { transform: rotate(45deg); }
-summary:hover { color: #1d3528; text-decoration: underline; text-underline-offset: 5px; }
 .training-list .training:last-child { border-bottom: 0; margin-bottom: 0; padding-bottom: 0; }
-.training-details { margin-top: 36px; border-top: 1px solid var(--line); }
-.details-content { font-size: 14px; padding-block: 8px 20px; columns: 2; column-gap: 60px; }
-.details-content h4 { margin-top: 20px; break-after: avoid; }
-.details-content h4:first-child { margin-top: 0; }
-.details-content li, .details-content p { break-inside: avoid; }
-.details-content ul { padding-left: 19px; }
-.details-content li + li { margin-top: 8px; }
+.additional-courses { margin-top: 36px; border-top: 1px solid var(--line); }
+.additional-courses > h3 { padding-block: 18px; font-size: 14px; font-weight: 550; }
+.courses-content { font-size: 14px; padding-block: 8px 20px; columns: 2; column-gap: 60px; }
+.courses-content h4 { margin-top: 20px; break-after: avoid; }
+.courses-content h4:first-child { margin-top: 0; }
+.courses-content li, .courses-content p { break-inside: avoid; }
+.courses-content ul { padding-left: 19px; }
+.courses-content li + li { margin-top: 8px; }
 .booking-grid { display: grid; grid-template-columns: .9fr 1.25fr; gap: 40px 64px; align-items: start; }
 .booking-grid > h2, .booking-terms { grid-column: 1 / -1; }
 .session-info, .payment-info { border-top: 1px solid var(--line); padding-top: 26px; }
@@ -199,7 +195,7 @@ address p { margin-top: 20px; }
   .section-heading > p { margin-top: 23px; max-width: none; }
   .approaches h3 { font-size: 27px; }
   .training-date span { margin-left: 10px; }
-  .details-content { columns: 1; }
+  .courses-content { columns: 1; }
   .price strong { font-size: 45px; }
   .payment-grid { grid-template-columns: 1fr; }
   .payment-grid img { width: 180px; }
