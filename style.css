@@ -102,6 +102,12 @@ nav .nav-booking:hover { background: var(--sage); text-decoration: none; }
 .degrees dt { color: var(--ink); }
 .degrees dd { margin: 0; color: var(--muted); }
 .university-logo { display: block; width: 195px; max-width: 100%; margin-top: 18px; }
+.provider-logo { display: block; width: fit-content; max-width: 100%; margin-top: 18px; }
+.provider-logo img { display: block; object-fit: contain; object-position: left center; max-width: 100%; height: auto; }
+.actplus-logo img { width: 145px; }
+.pca-logo img { width: 130px; }
+.npi-logo { margin: 0 0 22px; }
+.npi-logo img { width: 280px; }
 .courses-grid { display: grid; grid-template-columns: 1.4fr 1fr; gap: 64px; margin-top: 40px; padding-top: 30px; border-top: 1px solid var(--line); font-size: 14px; }
 .course-group h3 { display: flex; flex-wrap: wrap; align-items: baseline; gap: 8px 16px; font-size: 16px; font-weight: 500; margin-bottom: 12px; }
 .course-group h3 span { color: var(--muted); font-size: 12px; font-weight: 400; }
