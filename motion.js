@@ -2,16 +2,10 @@
 (() => {
   const preference = window.matchMedia('(prefers-reduced-motion: reduce)');
   const artwork = document.querySelector('.hero-art');
-  const toggle = document.querySelector('.motion-toggle');
-  let paused = false;
   let inView = true;
   const updateArtwork = () => {
-    artwork.classList.toggle('is-still', paused || !inView || document.hidden || preference.matches);
-    toggle.hidden = preference.matches;
-    toggle.setAttribute('aria-pressed', String(paused));
-    toggle.setAttribute('aria-label', paused ? 'Spustit animaci' : 'Pozastavit animaci');
+    artwork.classList.toggle('is-still', !inView || document.hidden || preference.matches);
   };
-  toggle.addEventListener('click', () => { paused = !paused; updateArtwork(); });
   preference.addEventListener('change', updateArtwork);
   document.addEventListener('visibilitychange', updateArtwork);
   if (window.IntersectionObserver) {
