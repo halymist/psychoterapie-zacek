@@ -116,19 +116,19 @@ nav .nav-booking:hover { background: var(--sage); text-decoration: none; }
 .course-group article + article { margin-top: 30px; }
 .booking-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); gap: 40px 64px; align-items: start; }
 .booking-grid > h2, .booking-terms { grid-column: 1 / -1; }
-.session-price { margin-bottom: 24px; }
-.session-location strong { font-weight: 500; color: var(--ink); font-size: 20px; }
+.session-price { margin-bottom: 32px; }
+.session-location strong { font-weight: 400; color: var(--body); font-size: 16px; }
+.session-location a { text-decoration-color: #a9b7a1; text-decoration-thickness: 1px; }
 .session-location { margin-bottom: 24px; }
 .session-location p { margin: 8px 0 0; color: var(--muted); font-size: 14px; }
-.session-info, .payment-info { border-top: 1px solid var(--line); padding-top: 26px; }
-.session-info h3, .payment-info h3 { font-size: 16px; font-weight: 500; margin-bottom: 20px; }
+.session-info, .payment-info { padding-top: 6px; }
+.session-info h3, .payment-info h3 { font-size: 16px; font-weight: 500; margin-bottom: 28px; }
 .session-info { position: relative; align-self: stretch; }
 .session-info::after { content: '→'; position: absolute; top: 50%; right: -64px; width: 64px; text-align: center; transform: translateY(-50%); color: var(--green); font-size: 36px; line-height: 1; }
 .payment-example { color: var(--muted); font-size: 13px; }
 .price { display: flex; flex-wrap: wrap; gap: 4px 16px; align-items: baseline; color: var(--ink); }
 .price strong { font-family: var(--serif); font-size: 60px; line-height: 1.2; font-weight: 400; letter-spacing: -2px; }
 .price span { color: var(--muted); font-size: 14px; }
-.session-info > p { font-size: 14px; margin-top: 14px; }
 .session-info .button { display: flex; margin-top: 28px; }
 .payment-info { font-size: 14px; }
 .payment-grid { display: grid; grid-template-columns: minmax(0, 1fr) 140px; gap: 24px; align-items: start; }
