@@ -21,3 +21,6 @@ cp "$project_root/favicon.svg" "$output_dir/"
 cp "$project_root/web-app-manifest-192x192.png" "$output_dir/"
 cp "$project_root/web-app-manifest-512x512.png" "$output_dir/"
 cp -R "$project_root/assets" "$output_dir/assets"
+
+stylesheet_version="$(sha256sum "$output_dir/style.css" | cut -c1-12)"
+sed -i "s|href=\"style.css\"|href=\"style.css?v=$stylesheet_version\"|" "$output_dir/index.html"
