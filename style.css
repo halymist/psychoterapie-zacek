@@ -122,7 +122,7 @@ nav .nav-booking:hover { text-decoration: underline; }
 .session-location strong { font-weight: 400; color: var(--body); font-size: 16px; }
 .session-location a { text-decoration-color: #a9b7a1; text-decoration-thickness: 1px; }
 .session-location { margin-bottom: 24px; }
-.session-location p { margin: 8px 0 0; color: var(--muted); font-size: 14px; }
+.session-location p { margin: 8px 0 0; color: var(--body); font-size: 16px; }
 .session-info, .payment-info { padding-top: 6px; }
 .session-info h3, .payment-info h3 { font-size: 16px; font-weight: 500; margin-bottom: 28px; }
 .session-info { position: relative; align-self: stretch; }
@@ -135,6 +135,8 @@ nav .nav-booking:hover { text-decoration: underline; }
 .payment-info { position: relative; font-size: 14px; padding-right: 234px; }
 .payment-info h3 { margin-right: -234px; }
 .payment-grid { display: block; }
+.payment-grid > div > p:first-child { margin-bottom: 0; }
+.payment-grid > div > p:first-child + p { margin-top: 0; }
 .payment-grid > a { position: absolute; right: 0; top: 66px; }
 .payment-grid img { width: 210px; border-radius: 3px; }
 .payment-grid strong { font-weight: 500; color: var(--ink); }
