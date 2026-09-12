@@ -131,8 +131,8 @@ nav .nav-booking:hover { background: var(--sage); text-decoration: none; }
 .price span { color: var(--muted); font-size: 14px; }
 .session-info .button { display: flex; margin-top: 28px; }
 .payment-info { font-size: 14px; }
-.payment-grid { display: grid; grid-template-columns: minmax(0, 1fr) 140px; gap: 24px; align-items: start; }
-.payment-grid img { width: 140px; border-radius: 3px; }
+.payment-grid { display: grid; grid-template-columns: minmax(0, 1fr) 210px; gap: 24px; align-items: start; }
+.payment-grid img { width: 210px; border-radius: 3px; }
 .payment-grid strong { font-weight: 500; color: var(--ink); }
 .booking-terms { border-top: 1px solid var(--line); padding-top: 24px; font-size: 13px; line-height: 1.8; }
 .booking-terms p { max-width: 90ch; }
