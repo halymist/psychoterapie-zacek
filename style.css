@@ -114,10 +114,9 @@ nav .nav-booking:hover { background: var(--sage); text-decoration: none; }
 .course-group li + li { margin-top: 8px; }
 .course-group li::marker { color: #8a9d7d; }
 .course-group article + article { margin-top: 30px; }
-.booking-grid { display: grid; grid-template-columns: .9fr 1.25fr; gap: 40px 64px; align-items: start; }
+.booking-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); gap: 40px 64px; align-items: start; }
 .booking-grid > h2, .booking-terms { grid-column: 1 / -1; }
 .session-price { margin-bottom: 24px; }
-.session-price > p { margin-bottom: 8px; color: var(--ink); }
 .session-location strong { font-weight: 500; color: var(--ink); font-size: 20px; }
 .session-location { margin-bottom: 24px; }
 .session-location p { margin: 8px 0 0; color: var(--muted); font-size: 14px; }
