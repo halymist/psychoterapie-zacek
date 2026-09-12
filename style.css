@@ -71,7 +71,7 @@ nav .nav-booking:hover { background: var(--sage); text-decoration: none; }
 .approach-diagram svg { display: block; width: 100%; height: 100%; overflow: visible; }
 .diagram-lines { fill: none; stroke: #bac7b4; stroke-width: 1.5; }
 .approach-diagram text { font-family: var(--sans); font-size: 13px; fill: var(--green); }
-.diagram-node { position: absolute; transform: translate(-50%, -50%); min-height: 46px; padding: 10px 16px; border: 1px solid #b9c6b1; border-radius: 28px; background: var(--paper); color: var(--green); font: 14px var(--sans); cursor: pointer; transition: background .25s, color .25s; }
+.diagram-node { position: absolute; transform: translate(-50%, -50%); min-height: 46px; padding: 10px 16px; border: 1px solid #b9c6b1; border-radius: 28px; background: var(--paper); color: var(--green); font: 14px var(--sans); cursor: pointer; }
 .node-top { left: 50%; top: 20%; }
 .node-left { left: 21.67%; top: 80%; }
 .node-right { left: 78.33%; top: 80%; }
@@ -80,6 +80,7 @@ nav .nav-booking:hover { background: var(--sage); text-decoration: none; }
 .diagram-node:focus-visible { outline: 3px solid #9b663b; outline-offset: 4px; }
 .diagram-detail { min-height: 8.75em; font-size: 14px; color: var(--green); }
 .approach-description { border-top: 1px solid var(--line); padding-top: 24px; font-size: 15px; }
+.approach-description strong { font-weight: 600; color: var(--ink); }
 .approach-diagram[data-active="0"] .line-0, .approach-diagram[data-active="1"] .line-1, .approach-diagram[data-active="2"] .line-2 { stroke: var(--green); stroke-dasharray: 1; animation: trace-connection 1s ease-out; }
 @keyframes trace-connection { from { stroke-dashoffset: 1; } to { stroke-dashoffset: 0; } }
 .education-section { background: #f0efe8; }
@@ -99,8 +100,7 @@ nav .nav-booking:hover { background: var(--sage); text-decoration: none; }
 .training > p:last-child { font-size: 14px; }
 .training-list .training:last-child { border-bottom: 0; margin-bottom: 0; padding-bottom: 0; }
 .additional-courses { margin-top: 36px; border-top: 1px solid var(--line); }
-.additional-courses > h3 { padding-block: 18px; font-size: 14px; font-weight: 550; }
-.courses-content { font-size: 14px; padding-block: 8px 20px; columns: 2; column-gap: 60px; }
+.courses-content { font-size: 14px; padding-block: 24px 20px; columns: 2; column-gap: 60px; }
 .courses-content h4 { margin-top: 20px; break-after: avoid; }
 .courses-content h4:first-child { margin-top: 0; }
 .courses-content li, .courses-content p { break-inside: avoid; }
