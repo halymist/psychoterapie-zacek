@@ -104,10 +104,12 @@ summary:hover { color: #1d3528; text-decoration: underline; text-underline-offse
 .price span { color: #65715f; font-size: 14px; }
 .session-card > p { font-size: 13px; margin-top: 5px; }
 .session-card .button { display: flex; margin-top: 26px; }
-.payment-details { border-bottom: 1px solid var(--line); margin-top: 15px; }
-.payment-grid { display: grid; grid-template-columns: 1fr 160px; gap: 22px; align-items: start; }
+.booking-grid { row-gap: 38px; align-items: start; }
+.payment-info { font-size: 14px; }
+.payment-info h3 { font-size: 15px; font-weight: 600; margin-bottom: 18px; }
+.payment-grid { display: grid; grid-template-columns: 1fr 140px; gap: 22px; align-items: start; }
 .payment-grid img { border-radius: 3px; }
-.booking-terms { padding-top: 24px; font-size: 12px; line-height: 1.8; }
+.booking-terms { font-size: 12px; line-height: 1.8; }
 .booking-terms h3 { font-family: var(--sans); font-size: 13px; font-weight: 600; margin-bottom: 9px; }
 .contact-section { background: #e7ecdf; }
 .contact-grid { display: grid; grid-template-columns: 1fr 1.1fr; gap: 85px; }
@@ -156,7 +158,8 @@ address p { margin-top: 20px; }
   .topic h3 { font-size: 23px; }
   .university { padding: 23px; }
   .session-card { padding: 26px; }
-  .payment-grid { grid-template-columns: 1fr; }
+  .booking-grid { grid-template-columns: 1fr; gap: 32px; }
+  .payment-grid { grid-template-columns: 1fr 180px; }
   .payment-grid img { max-width: 180px; }
   .contact-grid { gap: 30px; grid-template-columns: 1fr 1fr; }
   .contact-grid h2 { font-size: 37px; }
