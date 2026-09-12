@@ -54,7 +54,7 @@ nav .nav-booking:hover { background: var(--sage); text-decoration: none; }
 .botanical-stem { transform-origin: 243px 414px; }
 .about-portrait { margin-top: 30px; max-width: 295px; overflow: hidden; border-radius: 140px 140px 5px 5px; }
 .about-portrait img { width: 100%; height: 310px; object-fit: cover; object-position: 50% 38%; }
-.about-grid, .approach-grid { display: grid; grid-template-columns: 0.85fr 1.35fr; gap: 100px; }
+.about-grid { display: grid; grid-template-columns: 0.85fr 1.35fr; gap: 100px; }
 .about-copy .lead { font-size: 20px; line-height: 1.7; color: #3c4e42; }
 .section-heading > p { margin-top: 26px; max-width: 340px; }
 .topics-section { background: var(--sage); }
@@ -63,8 +63,25 @@ nav .nav-booking:hover { background: var(--sage); text-decoration: none; }
 .topic { border-top: 1px solid #bac8b3; padding-top: 22px; }
 .topic h3 { font-family: var(--serif); font-size: 27px; margin-bottom: 15px; }
 .topic p { font-size: 15px; }
-.approaches article + article { margin-top: 36px; padding-top: 36px; border-top: 1px solid var(--line); }
-.approaches h3 { margin-bottom: 16px; font-family: var(--serif); font-size: 29px; }
+.approach-heading { text-align: center; max-width: 570px; margin: 0 auto 50px; }
+.approach-heading p { margin-top: 22px; }
+.approaches { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 72px; }
+.approaches h3 { min-height: 2.8em; text-align: center; font-family: var(--serif); font-size: 29px; }
+.approach-diagram { position: relative; max-width: 360px; aspect-ratio: 3 / 2; margin: 0 auto 26px; }
+.approach-diagram svg { display: block; width: 100%; height: 100%; overflow: visible; }
+.diagram-lines { fill: none; stroke: #bac7b4; stroke-width: 1.5; }
+.approach-diagram text { font-family: var(--sans); font-size: 13px; fill: var(--green); }
+.diagram-node { position: absolute; transform: translate(-50%, -50%); min-height: 46px; padding: 10px 16px; border: 1px solid #b9c6b1; border-radius: 28px; background: var(--paper); color: var(--green); font: 14px var(--sans); cursor: pointer; transition: background .25s, color .25s; }
+.node-top { left: 50%; top: 20%; }
+.node-left { left: 21.67%; top: 80%; }
+.node-right { left: 78.33%; top: 80%; }
+.diagram-node:hover { background: var(--sage); }
+.diagram-node[aria-pressed="true"] { color: white; background: var(--green); border-color: var(--green); }
+.diagram-node:focus-visible { outline: 3px solid #9b663b; outline-offset: 4px; }
+.diagram-detail { min-height: 8.75em; font-size: 14px; color: var(--green); }
+.approach-description { border-top: 1px solid var(--line); padding-top: 24px; font-size: 15px; }
+.approach-diagram[data-active="0"] .line-0, .approach-diagram[data-active="1"] .line-1, .approach-diagram[data-active="2"] .line-2 { stroke: var(--green); stroke-dasharray: 1; animation: trace-connection 1s ease-out; }
+@keyframes trace-connection { from { stroke-dashoffset: 1; } to { stroke-dashoffset: 0; } }
 .education-section { background: #f0efe8; }
 .education-grid { display: grid; grid-template-columns: 0.85fr 1.35fr; gap: 100px; }
 .university { align-self: start; padding: 24px; border: 1px solid #dddfd4; background: #faf9f5; border-radius: 5px; }
@@ -137,7 +154,8 @@ address p { margin-top: 20px; }
   .wordmark { font-size: 19px; }
   .hero-grid { gap: 50px; }
   h1 { font-size: 52px; }
-  .about-grid, .approach-grid, .education-grid { gap: 60px; grid-template-columns: .9fr 1.2fr; }
+  .about-grid, .education-grid { gap: 60px; grid-template-columns: .9fr 1.2fr; }
+  .approaches { gap: 44px; }
   .contact-grid { gap: 45px; }
 }
 @media (max-width: 850px) {
@@ -149,7 +167,10 @@ address p { margin-top: 20px; }
   h1 { font-size: 48px; letter-spacing: -2px; }
   .hero-description { font-size: 15px; }
   .section { padding-block: 75px; }
-  .about-grid, .approach-grid, .education-grid { gap: 40px; grid-template-columns: 1fr 1.25fr; }
+  .about-grid, .education-grid { gap: 40px; grid-template-columns: 1fr 1.25fr; }
+  .approaches { gap: 30px; }
+  .diagram-node { padding-inline: 12px; font-size: 13px; }
+  .diagram-detail { min-height: 12.25em; }
   .topics-grid { gap: 25px; }
   .topic h3 { font-size: 23px; }
   .booking-grid { grid-template-columns: 1fr; gap: 32px; }
@@ -176,14 +197,17 @@ address p { margin-top: 20px; }
   .section { padding-block: 62px; }
   h2 { font-size: 39px; }
   h2 br { display: none; }
-  .about-grid, .approach-grid, .education-grid, .contact-grid { grid-template-columns: 1fr; gap: 30px; }
+  .about-grid, .education-grid, .contact-grid { grid-template-columns: 1fr; gap: 30px; }
   .about-copy .lead { font-size: 18px; }
   .section-intro { display: block; margin-bottom: 32px; }
   .topics-grid { grid-template-columns: 1fr; gap: 28px; }
   .topic { padding-top: 23px; }
   .topic h3 { margin: 0 0 10px; font-size: 27px; }
   .section-heading > p { margin-top: 23px; max-width: none; }
-  .approaches h3 { font-size: 27px; }
+  .approaches { grid-template-columns: 1fr; gap: 48px; }
+  .approaches h3 { min-height: 0; margin-bottom: 16px; font-size: 27px; }
+  .approach-heading { margin-bottom: 38px; }
+  .diagram-detail { min-height: 10.5em; }
   .training-date span { margin-left: 10px; }
   .courses-content { columns: 1; }
   .price strong { font-size: 45px; }

@@ -34,7 +34,7 @@
   // Booking, payment, navigation and the map are immediately usable and still.
   document.querySelectorAll([
     '.hero-copy', '.hero-art', '.about-grid > *',
-    '.topics-section .section-intro', '.topic', '.approach-grid > *',
+    '.topics-section .section-intro', '.topic', '.approach-heading', '.approach',
     '.education-section .section-intro', '.education-grid > *',
     '.contact-grid > div:first-child', '.site-footer p'
   ].join(',')).forEach(element => observer.observe(element));

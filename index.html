@@ -27,6 +27,7 @@
   <link rel="canonical" href="https://psychoterapie-zacek.cz/" />
   <link rel="stylesheet" href="style.css">
   <script src="motion.js" defer></script>
+  <script src="approaches.js" defer></script>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -137,11 +138,31 @@
         </div>
       </div>
     </section>
-    <section class="section container approach-grid" id="jak-pracuji" aria-labelledby="approach-title">
-      <div class="section-heading"><h2 id="approach-title">Jak pracuji</h2><p>Ve své práci propojuji dva terapeutické přístupy podle aktuálních potřeb klienta.</p></div>
+    <section class="section container approach-section" id="jak-pracuji" aria-labelledby="approach-title">
+      <div class="approach-heading"><h2 id="approach-title">Jak pracuji</h2><p>Vycházím ze dvou přístupů, které propojuji podle toho, co právě potřebujete.</p></div>
       <div class="approaches">
-        <article><h3>Porozumění a přijetí</h3><p>Přístup PCA, zaměřený na člověka podle Carla Rogerse, staví na empatii, přijetí a opravdovosti. Základem je vztah, ve kterém se můžete cítit bezpečně, důvěřovat a sdílet to, co prožíváte.</p></article>
-        <article><h3>Práce s myšlením a chováním</h3><p>Krátkodobá kognitivně-behaviorální terapie, k-KBT, se zaměřuje na souvislosti mezi myšlením a chováním. Využívá konkrétní techniky a pomáhá rozvíjet dovednosti pro zvládání obtíží v běžném životě.</p></article>
+        <article class="approach" aria-labelledby="pca-title">
+          <h3 id="pca-title">Porozumění a přijetí</h3>
+          <div class="approach-diagram" data-active="0" role="group" aria-label="Základy přístupu PCA">
+            <svg viewBox="0 0 360 240" aria-hidden="true" focusable="false"><g class="diagram-lines"><path class="line-0" pathLength="1" d="M180 48V130"/><path class="line-1" pathLength="1" d="M78 192Q105 138 164 138"/><path class="line-2" pathLength="1" d="M282 192Q255 138 196 138"/></g><circle cx="180" cy="138" r="34" fill="#e4eadd"/><text x="180" y="143" text-anchor="middle">Důvěra</text></svg>
+            <button type="button" class="diagram-node node-top" aria-pressed="true" aria-controls="pca-detail" data-description="Snažím se porozumět tomu, jak situaci prožíváte vy. Ověřuji si, zda vám rozumím, a dávám prostor i tomu, co se zatím těžko pojmenovává.">Empatie</button>
+            <button type="button" class="diagram-node node-left" aria-pressed="false" aria-controls="pca-detail" data-description="Můžete mluvit i o pocitech, za které se stydíte nebo které sami odmítáte. Přijetí znamená respekt k vám jako člověku, i když společně zkoumáme obtížná témata.">Přijetí</button>
+            <button type="button" class="diagram-node node-right" aria-pressed="false" aria-controls="pca-detail" data-description="V rozhovoru se snažím být otevřený a opravdový. I o tom, jak se vám při našich setkáních spolupracuje, můžeme mluvit přímo.">Opravdovost</button>
+          </div>
+          <p class="diagram-detail" id="pca-detail" aria-live="polite">Snažím se porozumět tomu, jak situaci prožíváte vy. Ověřuji si, zda vám rozumím, a dávám prostor i tomu, co se zatím těžko pojmenovává.</p>
+          <div class="approach-description"><p>Přístup zaměřený na člověka podle Carla Rogerse, PCA, staví na vztahu, ve kterém můžete otevřeně mluvit o tom, co prožíváte. Vy přinášíte témata, která jsou pro vás důležitá, a společně jim věnujeme pozornost.</p><p>Takový rozhovor může pomoci lépe rozpoznat vlastní potřeby a emoce a hledat rozhodnutí, která vám dávají smysl. Důležité je i vaše tempo.</p></div>
+        </article>
+        <article class="approach" aria-labelledby="cbt-title">
+          <h3 id="cbt-title">Myšlenky, emoce a chování</h3>
+          <div class="approach-diagram" data-active="0" role="group" aria-label="Souvislosti v kognitivně-behaviorální terapii">
+            <svg viewBox="0 0 360 240" aria-hidden="true" focusable="false"><g class="diagram-lines"><path class="line-0" pathLength="1" d="M198 48Q281 68 282 172"/><path class="line-1" pathLength="1" d="M259 199Q180 242 101 199"/><path class="line-2" pathLength="1" d="M78 172Q79 68 162 48"/></g></svg>
+            <button type="button" class="diagram-node node-top" aria-pressed="true" aria-controls="cbt-detail" data-description="Před náročným rozhovorem vás může napadnout: „Určitě to pokazím.“ Společně můžeme prozkoumat, z čeho tato myšlenka vychází a zda existují i jiné pohledy na situaci.">Myšlenky</button>
+            <button type="button" class="diagram-node node-right" aria-pressed="false" aria-controls="cbt-detail" data-description="Představa, že rozhovor dopadne špatně, může přinést strach, napětí nebo bušení srdce. Všímáme si emocí i tělesných reakcí a jejich souvislostí s tím, co vám běží hlavou.">Emoce</button>
+            <button type="button" class="diagram-node node-left" aria-pressed="false" aria-controls="cbt-detail" data-description="Kvůli obavám můžete rozhovor odkládat. To může krátce ulevit, ale potíž zůstává. V terapii můžeme hledat a postupně zkoušet jiný způsob, jak se k takové situaci postavit.">Chování</button>
+          </div>
+          <p class="diagram-detail" id="cbt-detail" aria-live="polite">Před náročným rozhovorem vás může napadnout: „Určitě to pokazím.“ Společně můžeme prozkoumat, z čeho tato myšlenka vychází a zda existují i jiné pohledy na situaci.</p>
+          <div class="approach-description"><p>Krátkodobá kognitivně-behaviorální terapie, k-KBT, se věnuje souvislostem mezi tím, co si myslíme, co cítíme a jak jednáme. Pracujeme s konkrétními situacemi z vašeho života a hledáme, co obtíže udržuje.</p><p>Součástí mohou být praktická cvičení a malé kroky, které si vyzkoušíte v běžném životě. Společně pak sledujeme, co vám pomáhá a co potřebuje upravit.</p></div>
+        </article>
       </div>
     </section>
     <section class="education-section" id="vzdelani" aria-labelledby="education-title">
