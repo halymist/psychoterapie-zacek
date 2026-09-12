@@ -104,7 +104,6 @@ summary:hover { color: #1d3528; text-decoration: underline; text-underline-offse
 .price span { color: var(--muted); font-size: 14px; }
 .session-info > p { font-size: 14px; margin-top: 14px; }
 .session-info .button { display: flex; margin-top: 28px; }
-.booking-grid .email-link { margin-top: 18px; font-size: 13px; overflow-wrap: anywhere; gap: 10px; }
 .payment-info { font-size: 14px; }
 .payment-grid { display: grid; grid-template-columns: minmax(0, 1fr) 140px; gap: 24px; align-items: start; }
 .payment-grid img { width: 140px; border-radius: 3px; }
