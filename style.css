@@ -61,7 +61,7 @@ nav .nav-booking:hover { background: var(--sage); text-decoration: none; }
 .portrait-frame img { width: 100%; height: 433px; object-fit: cover; object-position: 50% 38%; }
 .hero-portrait figcaption { text-align: center; padding-top: 21px; }
 .hero-portrait strong { display: block; font-family: var(--serif); font-weight: 400; font-size: 24px; color: var(--ink); }
-.about-grid, .approach-grid, .booking-grid { display: grid; grid-template-columns: 0.85fr 1.35fr; gap: 100px; }
+.about-grid, .approach-grid { display: grid; grid-template-columns: 0.85fr 1.35fr; gap: 100px; }
 .about-copy .lead { font-size: 20px; line-height: 1.7; color: #3c4e42; }
 .section-heading > p { margin-top: 26px; max-width: 340px; }
 .topics-section { background: var(--sage); }
@@ -96,21 +96,24 @@ summary:hover { color: #1d3528; text-decoration: underline; text-underline-offse
 .details-content h4 { margin-top: 20px; }
 .details-content ul { padding-left: 19px; }
 .details-content li + li { margin-top: 8px; }
-.booking-grid .email-link { margin-top: 25px; font-size: 13px; overflow-wrap: anywhere; gap: 10px; }
-.session-card { background: var(--sage); padding: 32px 36px 36px; border: 1px solid #dce2d6; border-radius: 5px; }
-.session-card h3 { font-size: 15px; margin-bottom: 16px; }
-.price { display: flex; gap: 16px; align-items: baseline; color: var(--ink); }
-.price strong { font-family: var(--serif); font-size: 48px; font-weight: 400; letter-spacing: -1px; }
-.price span { color: #65715f; font-size: 14px; }
-.session-card > p { font-size: 13px; margin-top: 5px; }
-.session-card .button { display: flex; margin-top: 26px; }
-.booking-grid { row-gap: 38px; align-items: start; }
+.booking-grid { display: grid; grid-template-columns: .9fr 1.25fr; gap: 40px 64px; align-items: start; }
+.booking-grid > h2, .booking-terms { grid-column: 1 / -1; }
+.session-info, .payment-info { border-top: 1px solid var(--line); padding-top: 26px; }
+.session-info h3, .payment-info h3 { font-size: 16px; font-weight: 500; margin-bottom: 20px; }
+.price { display: flex; flex-wrap: wrap; gap: 4px 16px; align-items: baseline; color: var(--ink); }
+.price strong { font-family: var(--serif); font-size: 60px; line-height: 1.2; font-weight: 400; letter-spacing: -2px; }
+.price span { color: var(--muted); font-size: 14px; }
+.session-info > p { font-size: 14px; margin-top: 14px; }
+.session-info .button { display: flex; margin-top: 28px; }
+.booking-grid .email-link { margin-top: 18px; font-size: 13px; overflow-wrap: anywhere; gap: 10px; }
 .payment-info { font-size: 14px; }
-.payment-info h3 { font-size: 15px; font-weight: 600; margin-bottom: 18px; }
-.payment-grid { display: grid; grid-template-columns: 1fr 140px; gap: 22px; align-items: start; }
-.payment-grid img { border-radius: 3px; }
-.booking-terms { font-size: 12px; line-height: 1.8; }
-.booking-terms h3 { font-family: var(--sans); font-size: 13px; font-weight: 600; margin-bottom: 9px; }
+.payment-grid { display: grid; grid-template-columns: minmax(0, 1fr) 140px; gap: 24px; align-items: start; }
+.payment-grid img { width: 140px; border-radius: 3px; }
+.payment-grid strong { font-weight: 500; color: var(--ink); }
+.booking-terms { border-top: 1px solid var(--line); padding-top: 24px; font-size: 13px; line-height: 1.8; }
+.booking-terms h3 { font-size: 14px; font-weight: 500; margin-bottom: 12px; }
+.booking-terms p { max-width: 90ch; }
+.booking-terms p + p { margin-top: 10px; }
 .contact-section { background: #e7ecdf; }
 .contact-grid { display: grid; grid-template-columns: 1fr 1.1fr; gap: 85px; }
 .contact-name { margin-top: 29px; font-size: 17px; color: var(--ink); }
@@ -140,7 +143,7 @@ address p { margin-top: 20px; }
   h1 { font-size: 59px; }
   .hero-portrait { max-width: 345px; }
   .portrait-frame img { height: 407px; }
-  .about-grid, .approach-grid, .booking-grid, .education-grid { gap: 60px; grid-template-columns: .9fr 1.2fr; }
+  .about-grid, .approach-grid, .education-grid { gap: 60px; grid-template-columns: .9fr 1.2fr; }
   .contact-grid { gap: 45px; }
   .university { padding: 27px; }
 }
@@ -155,14 +158,13 @@ address p { margin-top: 20px; }
   .hero-actions { gap: 15px; flex-wrap: wrap; }
   .portrait-frame img { height: 360px; }
   .section { padding-block: 75px; }
-  .about-grid, .approach-grid, .booking-grid, .education-grid { gap: 40px; grid-template-columns: 1fr 1.25fr; }
+  .about-grid, .approach-grid, .education-grid { gap: 40px; grid-template-columns: 1fr 1.25fr; }
   .topics-grid { gap: 25px; }
   .topic h3 { font-size: 23px; }
   .university { padding: 23px; }
-  .session-card { padding: 26px; }
   .booking-grid { grid-template-columns: 1fr; gap: 32px; }
   .payment-grid { grid-template-columns: 1fr 180px; }
-  .payment-grid img { max-width: 180px; }
+  .payment-grid img { width: 180px; }
   .contact-grid { gap: 30px; grid-template-columns: 1fr 1fr; }
   .contact-grid h2 { font-size: 37px; }
 }
@@ -189,7 +191,7 @@ address p { margin-top: 20px; }
   .section { padding-block: 62px; }
   h2 { font-size: 39px; }
   h2 br { display: none; }
-  .about-grid, .approach-grid, .booking-grid, .education-grid, .contact-grid { grid-template-columns: 1fr; gap: 30px; }
+  .about-grid, .approach-grid, .education-grid, .contact-grid { grid-template-columns: 1fr; gap: 30px; }
   .about-copy .lead { font-size: 18px; }
   .section-intro { display: block; margin-bottom: 32px; }
   .topics-grid { grid-template-columns: 1fr; gap: 28px; }
@@ -200,10 +202,9 @@ address p { margin-top: 20px; }
   .university { padding: 30px; }
   .university img { max-width: 225px; margin-bottom: 28px; }
   .training-date span { margin-left: 10px; }
-  .session-card { padding: 26px; }
   .price strong { font-size: 45px; }
   .payment-grid { grid-template-columns: 1fr; }
-  .payment-grid img { max-width: 210px; }
+  .payment-grid img { width: 180px; }
   .contact-grid h2 { font-size: 39px; }
   .map-container, .map-container iframe { min-height: 310px; }
   .site-footer { padding-block: 30px; }
